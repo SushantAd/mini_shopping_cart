@@ -72,13 +72,13 @@ or
 Rum via IDE
 ```
 
-Limitation:
+### Limitation:
 1. Works for only single currency.
 2. Offers are only application for first set of individual items e.g If some buys 4 apples and the offer is 2 at price 1 (It is only applied once).
 3. Only single offer can be applied per item (Extention is ready, will have to tweak).
 
 
-Extensions:
+### Extensions:
 1. Can be moved to a REST API approach.
 2. Static models can be updated with Data Models for future use:
 Note: Sub-offer tables can be de-normalised into single
@@ -101,6 +101,6 @@ Current Offers:
 1. buy one, get one free on Apples
 2. 3 for the price of 2 on Oranges
 
-####Note:
+#### Note:
 1. I haven't used any logging in the code as of now, since the intention was to print directly to console.
 2. I have added the primary uses cases mentioned in the problem statement to CheckoutServiceSpec.scala (for ease of use and test).
