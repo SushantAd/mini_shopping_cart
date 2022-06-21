@@ -100,3 +100,7 @@ Cols: id, condition, discountPercentage
 Current Offers:
 1. buy one, get one free on Apples
 2. 3 for the price of 2 on Oranges
+
+####Note:
+1. I haven't used any logging in the code as of now, since the intention was to print directly to console.
+2. I have added the primary uses cases mentioned in the problem statement to CheckoutServiceSpec.scala (for ease of use and test).
