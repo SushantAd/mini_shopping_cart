@@ -80,7 +80,8 @@ Rum via IDE
 
 ### Extensions:
 1. Can be moved to a REST API approach.
-2. Static models can be updated with Data Models for future use:
+2. Conditional checks can be better optimised.
+3. Static models can be updated with Data Models for future use:
 Note: Sub-offer tables can be de-normalised into single
 
 Table: Item (Store Item information)
@@ -94,7 +95,7 @@ Cols: id, condition, freeItems
 
 Table: DiscountOffer (Stores discount offers e.g 5% off on buying 2 Apples)
 Cols: id, condition, discountPercentage
-3. Conditional checks can be better optimised.
+
 
 
 Current Offers:
