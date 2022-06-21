@@ -8,8 +8,8 @@ import com.mini.shop.models.Item
 object MockDataModels {
 
   val item1 =  Item(1, "Apple", 0.60)
-  val item2 =  Item(1, "Apple", 0.60)
-  val item3 =  Item(1, "Apple", 0.60)
+  val item2 =  Item(2, "Orange", 0.25)
+  val item3 =  Item(3, "Grapes", 1.25)
 
   val items = List(item1, item2, item2)
 

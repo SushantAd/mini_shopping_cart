@@ -12,7 +12,9 @@ object Application
     val itemRepo = new ItemRepo
     val checkoutService = new CheckoutService(itemRepo)
     val inputItems = List("Apple", "Apple", "Orange", "Apple")
-    val totalCost = checkoutService.checkout(inputItems)
-    println(s"totalCost = ${totalCost}")
+    inputItems match {
+      case Nil => println(s"No items selected")
+      case _ => println(s"totalCost = ${checkoutService.checkout(inputItems)}")
+    }
   }
 }

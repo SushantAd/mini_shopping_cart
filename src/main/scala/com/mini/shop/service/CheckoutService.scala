@@ -14,7 +14,7 @@ class CheckoutService(itemRepo: ItemRepo) {
             val totalAmount = qty * item.amount
             BigDecimal(totalAmount).setScale(2, BigDecimal.RoundingMode.UP)
           }
-          case _ => println(s"${itemName} is invalid! Please check again"); defaultAmount
+          case _ => Console.println(s"${itemName} is invalid! Please check again"); defaultAmount
         }
         sum + currentSum
     }
