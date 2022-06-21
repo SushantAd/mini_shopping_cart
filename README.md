@@ -23,3 +23,21 @@ Acceptance Criteria:
    1. Checkout system will return the total amount of each *valid* item per quantity.
    2. Checkout system will display list of invalid items.
 3. When a user inputs empty item list, checkout system will display no item selected message.
+
+
+Limitation:
+1. Works for only single currency.
+
+
+### Running
+You need to download and install sbt for this application to run.
+The input can be changes in Application.scala
+
+```bash
+sbt run
+```
+
+### Testing
+```bash
+sbt test
+```
