@@ -1,5 +1,5 @@
 # mini_shopping_cart
-A console based mini shopping cart.
+Standalone mini shopping cart.
 
 ### Problem Statement: Phase 1
 
@@ -47,8 +47,12 @@ Acceptance Criteria:
 3. When there exists a valid offer for discounted items, checkout system will make the return the discounted price on total bill.
 4. When there exists no valid offer for an item, checkout system will return the original amount.
 
-Limitation:
-1. Works for only single currency.
+
+Implementation Details:
+1. Used external library to evaluate offer condition
+2. Used scalexpr (wrapper on top of fastparse)
+   1. Reason for using -> Was easier to understand given the current time constraint.
+3. Currently used static (hard coded) datasets, would suggest extending to actual database.
 
 
 ### Running
@@ -57,9 +61,42 @@ The input can be changes in Application.scala
 
 ```bash
 sbt run
+or
+Run via IDE
 ```
 
 ### Testing
 ```bash
 sbt test
+or 
+Rum via IDE
 ```
+
+Limitation:
+1. Works for only single currency.
+2. Offers are only application for first set of individual items e.g If some buys 4 apples and the offer is 2 at price 1 (It is only applied once).
+3. Only single offer can be applied per item (Extention is ready, will have to tweak).
+
+
+Extensions:
+1. Can be moved to a REST API approach.
+2. Static models can be updated with Data Models for future use:
+Note: Sub-offer tables can be de-normalised into single
+
+Table: Item (Store Item information)
+Cols: Id, name, amount
+
+Table: ItemOffers (Item-offer mapping table)
+Cols: id, itemId, offerId, offerType, isActive, updatedAt
+
+Table: FreeItemOffer (Stores free item offers e.g 1 Apple free on 2, 5 at the price of 2)
+Cols: id, condition, freeItems
+
+Table: DiscountOffer (Stores discount offers e.g 5% off on buying 2 Apples)
+Cols: id, condition, discountPercentage
+3. Conditional checks can be better optimised.
+
+
+Current Offers:
+1. buy one, get one free on Apples
+2. 3 for the price of 2 on Oranges
